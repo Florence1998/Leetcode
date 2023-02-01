@@ -1,7 +1,7 @@
-nums = [3, 2, 4]
-target = 6
-for num_index1 in range(0, len(nums)):
-    num2 = target - nums[num_index1]
-    if (num2 in nums) & (num_index1 < nums.index(nums)):
-        res = [num_index1, nums.index(num2)]
-        print(res)
+nums = [3, 7, 5]
+count = len(nums)
+for i in range(1, count):
+    for j in range(0, count - i):
+        if nums[j] < nums[j + 1]:
+            nums[j], nums[j + 1] = nums[j + 1], nums[j]
+print(nums)
